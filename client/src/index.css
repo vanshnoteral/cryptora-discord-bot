@@ -276,6 +276,31 @@
     background-color: hsl(var(--neon-blue));
   }
 
+  /* Neon opacity variants */
+  .bg-neon-cyan-5 {
+    background-color: hsl(var(--neon-cyan) / 0.05);
+  }
+
+  .bg-neon-purple-5 {
+    background-color: hsl(var(--neon-purple) / 0.05);
+  }
+
+  .bg-neon-blue-5 {
+    background-color: hsl(var(--neon-blue) / 0.05);
+  }
+
+  .border-neon-cyan-20 {
+    border-color: hsl(var(--neon-cyan) / 0.20);
+  }
+
+  .border-neon-purple-20 {
+    border-color: hsl(var(--neon-purple) / 0.20);
+  }
+
+  .border-neon-blue-20 {
+    border-color: hsl(var(--neon-blue) / 0.20);
+  }
+
   .gradient-cyber {
     background: linear-gradient(135deg, hsl(var(--neon-cyan)) 0%, hsl(var(--neon-purple)) 50%, hsl(var(--neon-blue)) 100%);
   }

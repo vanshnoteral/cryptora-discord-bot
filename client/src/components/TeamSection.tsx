@@ -71,7 +71,7 @@ export default function TeamSection() {
                 
                 <div className="relative z-10">
                   {/* Icon container */}
-                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full ${member.bgColor} mb-6 border-2 ${member.borderColor} mx-auto`}>
+                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full ${member.bgColor} mb-6 border-2 ${member.borderColor} mx-auto shadow-lg`}>
                     <Icon className={`w-10 h-10 ${member.color}`} />
                   </div>
 

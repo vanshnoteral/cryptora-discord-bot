@@ -49,7 +49,7 @@ export default function HeroSection() {
           <img
             src={cryptoraLogo}
             alt="Cryptora Logo"
-            className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 mx-auto drop-shadow-2xl"
+            className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 mx-auto rounded-full object-cover drop-shadow-2xl"
             style={{
               filter: 'drop-shadow(0 0 25px rgba(0, 255, 255, 0.5)) drop-shadow(0 0 50px rgba(128, 0, 255, 0.3))',
             }}
@@ -82,6 +82,7 @@ export default function HeroSection() {
             size="lg" 
             variant="outline"
             className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-exo font-semibold border-neon-purple text-neon-purple hover:bg-neon-purple/10 transition-all duration-300 hover:scale-105"
+            onClick={() => window.open("#", '_blank')}
             data-testid="button-support-server"
           >
             Support Server

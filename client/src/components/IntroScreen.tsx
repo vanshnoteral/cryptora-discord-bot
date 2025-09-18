@@ -81,7 +81,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
           <img
             src={cryptoraLogo}
             alt="Cryptora"
-            className={`relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 drop-shadow-2xl transition-all duration-500 ${
+            className={`relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full object-cover drop-shadow-2xl transition-all duration-500 ${
               glitchActive ? 'animate-neon-flicker' : ''
             }`}
             style={{
