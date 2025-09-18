@@ -1,31 +1,7 @@
 import { Card } from '@/components/ui/card';
-import { Crown, Code, Shield, Scale, Music, Gamepad2 } from 'lucide-react';
+import { Shield, Scale, Music, Gamepad2, Zap, Gift } from 'lucide-react';
 
 export default function AboutSection() {
-  const teamMembers = [
-    {
-      name: 'Npg',
-      role: 'Owner',
-      icon: Crown,
-      color: 'text-neon-cyan',
-      bgColor: 'bg-neon-cyan/10',
-    },
-    {
-      name: 'Sandeep',
-      role: 'Developer',
-      icon: Code,
-      color: 'text-neon-purple',
-      bgColor: 'bg-neon-purple/10',
-    },
-    {
-      name: 'Vansh',
-      role: 'Admin',
-      icon: Shield,
-      color: 'text-neon-blue',
-      bgColor: 'bg-neon-blue/10',
-    },
-  ];
-
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       {/* Background elements */}
@@ -34,7 +10,7 @@ export default function AboutSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient mb-6" data-testid="about-title">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-gradient mb-6" data-testid="about-title">
             About Cryptora
           </h2>
           <div className="h-1 w-24 mx-auto gradient-cyber mb-8" />
@@ -51,52 +27,78 @@ export default function AboutSection() {
           </p>
         </div>
 
-        {/* Team section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {teamMembers.map((member, index) => {
-            const Icon = member.icon;
-            return (
-              <Card 
-                key={member.name}
-                className={`glass-card p-8 text-center hover-elevate transition-all duration-300 ${member.bgColor} border-opacity-30`}
-                data-testid={`team-member-${member.name.toLowerCase()}`}
-              >
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${member.bgColor} mb-4 border border-current border-opacity-30`}>
-                  <Icon className={`w-8 h-8 ${member.color}`} />
-                </div>
-                <h3 className={`text-2xl font-orbitron font-bold ${member.color} mb-2`}>
-                  {member.name}
-                </h3>
-                <p className="text-gray-400 font-exo">
-                  {member.role}
-                </p>
-                
-              </Card>
-            );
-          })}
+        {/* Key Features */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <Card className="glass-card p-6 text-center hover-elevate transition-all duration-300 bg-neon-cyan/5 border-neon-cyan/20">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-neon-cyan/10 mb-4 border border-neon-cyan/30">
+              <Shield className="w-6 h-6 text-neon-cyan" />
+            </div>
+            <h3 className="text-lg font-orbitron font-bold text-neon-cyan mb-2">Advanced Security</h3>
+            <p className="text-gray-400 font-exo text-sm">Comprehensive protection against raids, spam, and malicious activities</p>
+          </Card>
+          
+          <Card className="glass-card p-6 text-center hover-elevate transition-all duration-300 bg-neon-purple/5 border-neon-purple/20">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-neon-purple/10 mb-4 border border-neon-purple/30">
+              <Scale className="w-6 h-6 text-neon-purple" />
+            </div>
+            <h3 className="text-lg font-orbitron font-bold text-neon-purple mb-2">Smart Moderation</h3>
+            <p className="text-gray-400 font-exo text-sm">AI-powered automod with customizable rules and instant responses</p>
+          </Card>
+          
+          <Card className="glass-card p-6 text-center hover-elevate transition-all duration-300 bg-neon-blue/5 border-neon-blue/20">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-neon-blue/10 mb-4 border border-neon-blue/30">
+              <Music className="w-6 h-6 text-neon-blue" />
+            </div>
+            <h3 className="text-lg font-orbitron font-bold text-neon-blue mb-2">Premium Music</h3>
+            <p className="text-gray-400 font-exo text-sm">High-quality music streaming with playlist management and controls</p>
+          </Card>
+
+          <Card className="glass-card p-6 text-center hover-elevate transition-all duration-300 bg-neon-cyan/5 border-neon-cyan/20">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-neon-cyan/10 mb-4 border border-neon-cyan/30">
+              <Gamepad2 className="w-6 h-6 text-neon-cyan" />
+            </div>
+            <h3 className="text-lg font-orbitron font-bold text-neon-cyan mb-2">Fun & Games</h3>
+            <p className="text-gray-400 font-exo text-sm">Entertainment features to keep your community engaged</p>
+          </Card>
+
+          <Card className="glass-card p-6 text-center hover-elevate transition-all duration-300 bg-neon-purple/5 border-neon-purple/20">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-neon-purple/10 mb-4 border border-neon-purple/30">
+              <Gift className="w-6 h-6 text-neon-purple" />
+            </div>
+            <h3 className="text-lg font-orbitron font-bold text-neon-purple mb-2">Giveaways</h3>
+            <p className="text-gray-400 font-exo text-sm">Create and manage exciting giveaways for your community</p>
+          </Card>
+
+          <Card className="glass-card p-6 text-center hover-elevate transition-all duration-300 bg-neon-blue/5 border-neon-blue/20">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-neon-blue/10 mb-4 border border-neon-blue/30">
+              <Zap className="w-6 h-6 text-neon-blue" />
+            </div>
+            <h3 className="text-lg font-orbitron font-bold text-neon-blue mb-2">Lightning Fast</h3>
+            <p className="text-gray-400 font-exo text-sm">Optimized performance with minimal latency and maximum uptime</p>
+          </Card>
         </div>
 
         {/* Stats grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-          <div className="glass-card p-6 text-center hover-elevate" data-testid="stat-security">
-            <div className="text-3xl mb-2"><Shield className="w-8 h-8 mx-auto text-neon-cyan" /></div>
-            <div className="text-lg font-orbitron font-bold text-neon-cyan">Security</div>
-            <div className="text-sm text-gray-400">Advanced Protection</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="glass-card p-4 md:p-6 text-center hover-elevate" data-testid="stat-security">
+            <div className="text-2xl md:text-3xl mb-2"><Shield className="w-6 h-6 md:w-8 md:h-8 mx-auto text-neon-cyan" /></div>
+            <div className="text-sm md:text-lg font-orbitron font-bold text-neon-cyan">Security</div>
+            <div className="text-xs md:text-sm text-gray-400">Advanced Protection</div>
           </div>
-          <div className="glass-card p-6 text-center hover-elevate" data-testid="stat-moderation">
-            <div className="text-3xl mb-2"><Scale className="w-8 h-8 mx-auto text-neon-purple" /></div>
-            <div className="text-lg font-orbitron font-bold text-neon-purple">Moderation</div>
-            <div className="text-sm text-gray-400">Smart AutoMod</div>
+          <div className="glass-card p-4 md:p-6 text-center hover-elevate" data-testid="stat-moderation">
+            <div className="text-2xl md:text-3xl mb-2"><Scale className="w-6 h-6 md:w-8 md:h-8 mx-auto text-neon-purple" /></div>
+            <div className="text-sm md:text-lg font-orbitron font-bold text-neon-purple">Moderation</div>
+            <div className="text-xs md:text-sm text-gray-400">Smart AutoMod</div>
           </div>
-          <div className="glass-card p-6 text-center hover-elevate" data-testid="stat-music">
-            <div className="text-3xl mb-2"><Music className="w-8 h-8 mx-auto text-neon-blue" /></div>
-            <div className="text-lg font-orbitron font-bold text-neon-blue">Music</div>
-            <div className="text-sm text-gray-400">High Quality Audio</div>
+          <div className="glass-card p-4 md:p-6 text-center hover-elevate" data-testid="stat-music">
+            <div className="text-2xl md:text-3xl mb-2"><Music className="w-6 h-6 md:w-8 md:h-8 mx-auto text-neon-blue" /></div>
+            <div className="text-sm md:text-lg font-orbitron font-bold text-neon-blue">Music</div>
+            <div className="text-xs md:text-sm text-gray-400">High Quality Audio</div>
           </div>
-          <div className="glass-card p-6 text-center hover-elevate" data-testid="stat-fun">
-            <div className="text-3xl mb-2"><Gamepad2 className="w-8 h-8 mx-auto text-neon-cyan" /></div>
-            <div className="text-lg font-orbitron font-bold text-neon-cyan">Fun & Games</div>
-            <div className="text-sm text-gray-400">Entertainment</div>
+          <div className="glass-card p-4 md:p-6 text-center hover-elevate" data-testid="stat-fun">
+            <div className="text-2xl md:text-3xl mb-2"><Gamepad2 className="w-6 h-6 md:w-8 md:h-8 mx-auto text-neon-cyan" /></div>
+            <div className="text-sm md:text-lg font-orbitron font-bold text-neon-cyan">Fun & Games</div>
+            <div className="text-xs md:text-sm text-gray-400">Entertainment</div>
           </div>
         </div>
       </div>

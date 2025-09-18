@@ -92,17 +92,17 @@ export default function ModulesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient mb-6" data-testid="modules-title">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-orbitron font-bold text-gradient mb-6" data-testid="modules-title">
             Bot Modules
           </h2>
           <div className="h-1 w-24 mx-auto gradient-cyber mb-8" />
-          <p className="text-lg text-gray-400 font-exo max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 font-exo max-w-2xl mx-auto px-4">
             Comprehensive suite of features designed for complete Discord server management
           </p>
         </div>
 
         {/* Main modules grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-16 px-4">
           {mainModules.map((module, index) => {
             const Icon = module.icon;
             return (

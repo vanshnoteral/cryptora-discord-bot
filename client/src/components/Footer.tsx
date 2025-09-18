@@ -11,9 +11,9 @@ export default function Footer() {
       <div className="absolute inset-0 cyber-grid opacity-5" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10 px-4">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-12">
           {/* Logo and description */}
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
@@ -95,17 +95,17 @@ export default function Footer() {
         </div>
 
         {/* CTA Section */}
-        <div className="glass-card p-8 rounded-lg text-center mb-12">
-          <h3 className="text-2xl font-orbitron font-bold text-gradient neon-glow mb-4">
+        <div className="glass-card p-6 sm:p-8 rounded-lg text-center mb-12">
+          <h3 className="text-xl sm:text-2xl font-orbitron font-bold text-gradient mb-4">
             Ready to Enhance Your Server?
           </h3>
-          <p className="text-gray-400 font-exo mb-6 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-400 font-exo mb-6 max-w-2xl mx-auto">
             Join thousands of Discord servers using Cryptora for advanced security, 
             moderation, and entertainment features.
           </p>
           <Button 
             size="lg"
-            className="px-8 py-4 text-lg font-exo font-semibold bg-neon-cyan text-black hover:bg-neon-cyan/90 neon-border transition-all duration-300 hover:scale-105"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-exo font-semibold bg-neon-cyan text-black hover:bg-neon-cyan/90 neon-border transition-all duration-300 hover:scale-105"
             onClick={() => window.open(botInviteUrl, '_blank')}
             data-testid="footer-cta-invite"
           >

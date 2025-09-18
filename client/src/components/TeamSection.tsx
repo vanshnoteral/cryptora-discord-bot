@@ -47,17 +47,17 @@ export default function TeamSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient mb-6" data-testid="team-title">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-orbitron font-bold text-gradient mb-6" data-testid="team-title">
             About The Developers
           </h2>
           <div className="h-1 w-24 mx-auto gradient-cyber mb-8" />
-          <p className="text-lg text-gray-400 font-exo max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 font-exo max-w-2xl mx-auto px-4">
             Meet the talented team behind Cryptora's development and this website
           </p>
         </div>
 
         {/* Team grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 px-4">
           {teamMembers.map((member, index) => {
             const Icon = member.icon;
             return (
@@ -76,10 +76,10 @@ export default function TeamSection() {
                   </div>
 
                   {/* Name and role */}
-                  <h3 className={`text-2xl font-orbitron font-bold ${member.color} mb-2`}>
+                  <h3 className={`text-xl sm:text-2xl font-orbitron font-bold ${member.color} mb-2`}>
                     {member.name}
                     {member.suffix && (
-                      <span className="text-sm text-gray-400 ml-2 font-exo">
+                      <span className="text-xs sm:text-sm text-gray-400 ml-2 font-exo">
                         {member.suffix}
                       </span>
                     )}
@@ -111,7 +111,7 @@ export default function TeamSection() {
         </div>
 
         {/* Team stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-16 px-4">
           <div className="glass-card p-6 text-center hover-elevate" data-testid="team-stat-experience">
             <div className="text-3xl font-orbitron font-bold text-neon-cyan neon-glow">5+</div>
             <div className="text-gray-400 font-exo">Years Experience</div>

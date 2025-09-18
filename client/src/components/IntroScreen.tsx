@@ -61,7 +61,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
           <img
             src={cryptoraLogo}
             alt="Cryptora"
-            className={`relative w-48 h-48 md:w-64 md:h-64 drop-shadow-2xl transition-all duration-500 ${
+            className={`relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 drop-shadow-2xl transition-all duration-500 ${
               glitchActive ? 'animate-neon-flicker' : ''
             }`}
             style={{
@@ -72,11 +72,18 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
 
         {/* Cryptora title */}
         <div className="text-center mb-12">
-          <h1 className={`font-orbitron text-6xl md:text-8xl font-black text-gradient neon-glow mb-4 transition-all duration-1000 ${
+          <h1 className={`font-orbitron text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-gradient mb-4 transition-all duration-1000 ${
             showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           } ${glitchActive ? 'animate-neon-flicker' : ''}`}>
             CRYPTORA
           </h1>
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center space-x-2 text-neon-cyan text-sm md:text-base font-exo">
+              <div className="w-2 h-2 bg-neon-cyan rounded-full animate-pulse" />
+              <span>DISCORD BOT</span>
+              <div className="w-2 h-2 bg-neon-cyan rounded-full animate-pulse" />
+            </div>
+          </div>
           <div className={`h-1 w-32 mx-auto gradient-cyber transition-all duration-1000 delay-300 ${
             showText ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
           }`} />
@@ -86,13 +93,15 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
         <div className={`text-center transition-all duration-1000 delay-700 ${
           showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
-          <p className="text-neon-cyan text-lg md:text-xl font-exo font-light mb-2 animate-glow-pulse">
-            click anywhere to enter
-          </p>
-          <div className="flex justify-center space-x-1">
-            <div className="w-2 h-2 bg-neon-cyan rounded-full animate-pulse" style={{ animationDelay: '0s' }} />
-            <div className="w-2 h-2 bg-neon-purple rounded-full animate-pulse" style={{ animationDelay: '0.3s' }} />
-            <div className="w-2 h-2 bg-neon-blue rounded-full animate-pulse" style={{ animationDelay: '0.6s' }} />
+          <div className="glass-card inline-block px-8 py-4 mb-6 border border-neon-cyan/30">
+            <p className="text-neon-cyan text-lg md:text-xl font-exo font-light animate-pulse">
+              CLICK ANYWHERE TO ENTER
+            </p>
+          </div>
+          <div className="flex justify-center space-x-2">
+            <div className="w-3 h-3 bg-neon-cyan rounded-full animate-bounce" style={{ animationDelay: '0s' }} />
+            <div className="w-3 h-3 bg-neon-purple rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+            <div className="w-3 h-3 bg-neon-blue rounded-full animate-bounce" style={{ animationDelay: '0.4s' }} />
           </div>
         </div>
 
