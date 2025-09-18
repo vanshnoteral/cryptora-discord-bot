@@ -69,7 +69,7 @@ export default function FeaturesSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient neon-glow mb-6" data-testid="features-title">
+          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient mb-6" data-testid="features-title">
             Features
           </h2>
           <div className="h-1 w-24 mx-auto gradient-cyber mb-8" />
@@ -88,7 +88,7 @@ export default function FeaturesSection() {
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-lg ${feature.bgColor} mb-6 border ${feature.borderColor}`}>
                   <Icon className={`w-8 h-8 ${feature.color}`} />
                 </div>
-                <h3 className={`text-3xl font-orbitron font-bold ${feature.color} neon-glow mb-4`}>
+                <h3 className={`text-3xl font-orbitron font-bold ${feature.color} mb-4`}>
                   {feature.title}
                 </h3>
                 <p className="text-gray-400 font-exo">

@@ -5,34 +5,37 @@ export default function TeamSection() {
   const teamMembers = [
     {
       name: 'Npg',
-      role: 'Owner',
+      role: 'Bot Owner',
       icon: Crown,
       color: 'text-neon-cyan',
       bgColor: 'bg-neon-cyan/10',
       borderColor: 'border-neon-cyan/30',
       gradient: 'from-neon-cyan/20 to-transparent',
-      description: 'Visionary leader behind Cryptora',
+      description: 'Visionary leader and co-creator of Cryptora Discord bot',
+      details: 'Project visionary, community leader, and strategic planning',
     },
     {
       name: 'Sandeep',
-      role: 'Developer',
+      role: 'Bot Developer',
       suffix: '(OP)',
       icon: Code2,
       color: 'text-neon-purple',
       bgColor: 'bg-neon-purple/10',
       borderColor: 'border-neon-purple/30',
       gradient: 'from-neon-purple/20 to-transparent',
-      description: 'Lead developer and architect',
+      description: 'Lead developer and technical architect of Cryptora',
+      details: 'Backend development, bot architecture, and feature implementation',
     },
     {
       name: 'Vansh',
-      role: 'Admin',
+      role: 'Website Developer',
       icon: ShieldCheck,
       color: 'text-neon-blue',
       bgColor: 'bg-neon-blue/10',
       borderColor: 'border-neon-blue/30',
       gradient: 'from-neon-blue/20 to-transparent',
-      description: 'Community manager and administrator',
+      description: 'Website developer and community administrator',
+      details: 'Frontend development, UI/UX design, and community management',
     },
   ];
 
@@ -44,12 +47,12 @@ export default function TeamSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient neon-glow mb-6" data-testid="team-title">
-            Meet The Team
+          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient mb-6" data-testid="team-title">
+            About The Developers
           </h2>
           <div className="h-1 w-24 mx-auto gradient-cyber mb-8" />
           <p className="text-lg text-gray-400 font-exo max-w-2xl mx-auto">
-            The brilliant minds behind Cryptora's development and management
+            Meet the talented team behind Cryptora's development and this website
           </p>
         </div>
 
@@ -73,7 +76,7 @@ export default function TeamSection() {
                   </div>
 
                   {/* Name and role */}
-                  <h3 className={`text-2xl font-orbitron font-bold ${member.color} neon-glow mb-2`}>
+                  <h3 className={`text-2xl font-orbitron font-bold ${member.color} mb-2`}>
                     {member.name}
                     {member.suffix && (
                       <span className="text-sm text-gray-400 ml-2 font-exo">
@@ -88,8 +91,11 @@ export default function TeamSection() {
                     </span>
                   </div>
 
-                  <p className="text-gray-400 font-exo text-sm">
+                  <p className="text-gray-400 font-exo text-sm mb-3">
                     {member.description}
+                  </p>
+                  <p className="text-gray-500 font-exo text-xs">
+                    {member.details}
                   </p>
 
                   {/* Decorative elements */}

@@ -92,7 +92,7 @@ export default function ModulesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient neon-glow mb-6" data-testid="modules-title">
+          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient mb-6" data-testid="modules-title">
             Bot Modules
           </h2>
           <div className="h-1 w-24 mx-auto gradient-cyber mb-8" />
@@ -114,7 +114,7 @@ export default function ModulesSection() {
                 <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg ${module.bgColor} mb-4 border ${module.borderColor}`}>
                   <Icon className={`w-6 h-6 ${module.color}`} />
                 </div>
-                <h3 className={`text-xl font-orbitron font-bold ${module.color} neon-glow mb-2`}>
+                <h3 className={`text-xl font-orbitron font-bold ${module.color} mb-2`}>
                   {module.name}
                 </h3>
                 <p className="text-gray-400 font-exo text-sm">

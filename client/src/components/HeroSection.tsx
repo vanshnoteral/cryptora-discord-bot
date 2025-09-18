@@ -39,15 +39,15 @@ export default function HeroSection() {
         </div>
 
         {/* Main title */}
-        <h1 className="font-orbitron text-7xl md:text-9xl font-black text-gradient neon-glow mb-6" data-testid="hero-title">
+        <h1 className="font-orbitron text-7xl md:text-9xl font-black text-gradient mb-6" data-testid="hero-title">
           CRYPTORA
         </h1>
 
         {/* Tagline */}
         <p className="text-xl md:text-2xl text-gray-300 font-exo font-light mb-12 max-w-4xl mx-auto leading-relaxed">
-          Your All-in-One <span className="text-neon-cyan neon-glow">Security</span>, 
-          <span className="text-neon-purple neon-glow"> Moderation</span> & 
-          <span className="text-neon-blue neon-glow"> Fun</span> Discord Bot
+          Your All-in-One <span className="text-neon-cyan">Security</span>, 
+          <span className="text-neon-purple"> Moderation</span> & 
+          <span className="text-neon-blue"> Fun</span> Discord Bot
         </p>
 
         {/* CTA Buttons */}
@@ -58,7 +58,6 @@ export default function HeroSection() {
             onClick={() => window.open("https://discord.com/oauth2/authorize?client_id=1324050005467730091", '_blank')}
             data-testid="button-invite-bot"
           >
-            <span className="mr-2">🚀</span>
             Invite Bot
           </Button>
           <Button 
@@ -67,7 +66,6 @@ export default function HeroSection() {
             className="px-8 py-4 text-lg font-exo font-semibold border-neon-purple text-neon-purple hover:bg-neon-purple/10 transition-all duration-300 hover:scale-105"
             data-testid="button-support-server"
           >
-            <span className="mr-2">💬</span>
             Support Server
           </Button>
         </div>

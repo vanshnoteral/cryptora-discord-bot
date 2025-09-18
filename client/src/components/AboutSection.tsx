@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card';
-import { Crown, Code, Shield } from 'lucide-react';
+import { Crown, Code, Shield, Scale, Music, Gamepad2 } from 'lucide-react';
 
 export default function AboutSection() {
   const teamMembers = [
@@ -34,7 +34,7 @@ export default function AboutSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient neon-glow mb-6" data-testid="about-title">
+          <h2 className="text-5xl md:text-6xl font-orbitron font-bold text-gradient mb-6" data-testid="about-title">
             About Cryptora
           </h2>
           <div className="h-1 w-24 mx-auto gradient-cyber mb-8" />
@@ -64,19 +64,13 @@ export default function AboutSection() {
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${member.bgColor} mb-4 border border-current border-opacity-30`}>
                   <Icon className={`w-8 h-8 ${member.color}`} />
                 </div>
-                <h3 className={`text-2xl font-orbitron font-bold ${member.color} neon-glow mb-2`}>
+                <h3 className={`text-2xl font-orbitron font-bold ${member.color} mb-2`}>
                   {member.name}
                 </h3>
                 <p className="text-gray-400 font-exo">
                   {member.role}
                 </p>
                 
-                {/* Role emoji indicators */}
-                <div className="mt-4 text-2xl">
-                  {member.role === 'Owner' && '👑'}
-                  {member.role === 'Developer' && '🧑‍💻'}
-                  {member.role === 'Admin' && '🛡️'}
-                </div>
               </Card>
             );
           })}
@@ -85,22 +79,22 @@ export default function AboutSection() {
         {/* Stats grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           <div className="glass-card p-6 text-center hover-elevate" data-testid="stat-security">
-            <div className="text-3xl mb-2">🔐</div>
+            <div className="text-3xl mb-2"><Shield className="w-8 h-8 mx-auto text-neon-cyan" /></div>
             <div className="text-lg font-orbitron font-bold text-neon-cyan">Security</div>
             <div className="text-sm text-gray-400">Advanced Protection</div>
           </div>
           <div className="glass-card p-6 text-center hover-elevate" data-testid="stat-moderation">
-            <div className="text-3xl mb-2">⚖️</div>
+            <div className="text-3xl mb-2"><Scale className="w-8 h-8 mx-auto text-neon-purple" /></div>
             <div className="text-lg font-orbitron font-bold text-neon-purple">Moderation</div>
             <div className="text-sm text-gray-400">Smart AutoMod</div>
           </div>
           <div className="glass-card p-6 text-center hover-elevate" data-testid="stat-music">
-            <div className="text-3xl mb-2">🎵</div>
+            <div className="text-3xl mb-2"><Music className="w-8 h-8 mx-auto text-neon-blue" /></div>
             <div className="text-lg font-orbitron font-bold text-neon-blue">Music</div>
             <div className="text-sm text-gray-400">High Quality Audio</div>
           </div>
           <div className="glass-card p-6 text-center hover-elevate" data-testid="stat-fun">
-            <div className="text-3xl mb-2">🎮</div>
+            <div className="text-3xl mb-2"><Gamepad2 className="w-8 h-8 mx-auto text-neon-cyan" /></div>
             <div className="text-lg font-orbitron font-bold text-neon-cyan">Fun & Games</div>
             <div className="text-sm text-gray-400">Entertainment</div>
           </div>
