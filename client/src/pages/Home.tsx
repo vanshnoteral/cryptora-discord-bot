@@ -19,7 +19,7 @@ export default function Home() {
   }
 
   return (
-    <div className="dark bg-black text-white">
+    <div className="dark gradient-bg text-white">
       <HeroSection />
       <AboutSection />
       <ModulesSection />

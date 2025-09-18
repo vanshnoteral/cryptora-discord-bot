@@ -30,24 +30,44 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
 
   return (
     <div 
-      className="fixed inset-0 bg-black cursor-pointer overflow-hidden"
+      className="fixed inset-0 gradient-bg cursor-pointer overflow-hidden"
       onClick={handleClick}
       data-testid="intro-screen"
     >
       {/* Animated background grid */}
-      <div className="absolute inset-0 cyber-grid opacity-20" />
+      <div className="absolute inset-0 cyber-grid opacity-15" />
       
-      {/* Floating particles */}
+      {/* Floating orbs */}
+      <div className="floating-orbs">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={`orb-${i}`}
+            className="floating-orb"
+            style={{
+              width: `${Math.random() * 6 + 4}px`,
+              height: `${Math.random() * 6 + 4}px`,
+              left: `${Math.random() * 100}%`,
+              background: i % 3 === 0 ? 'hsl(var(--neon-cyan))' : i % 3 === 1 ? 'hsl(var(--neon-purple))' : 'hsl(var(--neon-blue))',
+              animationDelay: `${Math.random() * 20}s`,
+              animationDuration: `${15 + Math.random() * 10}s`,
+            }}
+          />
+        ))}
+      </div>
+      
+      {/* Enhanced floating particles */}
       <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(15)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-neon-cyan rounded-full animate-float"
+            className="absolute w-1 h-1 rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+              background: i % 2 === 0 ? 'hsl(var(--neon-cyan))' : 'hsl(var(--neon-purple))',
               animationDelay: `${Math.random() * 3}s`,
               animationDuration: `${3 + Math.random() * 2}s`,
+              boxShadow: `0 0 4px currentColor`,
             }}
           />
         ))}
@@ -57,7 +77,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-8">
         {/* Logo container */}
         <div className="relative mb-8 animate-float">
-          <div className="absolute inset-0 bg-neon-cyan/20 rounded-full blur-xl scale-150 animate-glow-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/30 via-neon-purple/20 to-neon-blue/30 rounded-full blur-2xl scale-150 animate-glow-pulse" />
           <img
             src={cryptoraLogo}
             alt="Cryptora"
@@ -65,7 +85,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
               glitchActive ? 'animate-neon-flicker' : ''
             }`}
             style={{
-              filter: 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.5)) drop-shadow(0 0 40px rgba(0, 255, 255, 0.3))',
+              filter: 'drop-shadow(0 0 30px rgba(0, 255, 255, 0.6)) drop-shadow(0 0 60px rgba(128, 0, 255, 0.4)) drop-shadow(0 0 90px rgba(0, 150, 255, 0.3))',
             }}
           />
         </div>
@@ -93,7 +113,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
         <div className={`text-center transition-all duration-1000 delay-700 ${
           showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
-          <div className="glass-card inline-block px-8 py-4 mb-6 border border-neon-cyan/30">
+          <div className="futuristic-border glass-card inline-block px-8 py-4 mb-6 rounded-lg">
             <p className="text-neon-cyan text-lg md:text-xl font-exo font-light animate-pulse">
               CLICK ANYWHERE TO ENTER
             </p>

@@ -5,8 +5,26 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-      <div className="absolute inset-0 cyber-grid opacity-10" />
+      <div className="absolute inset-0 gradient-bg" />
+      <div className="absolute inset-0 cyber-grid opacity-8" />
+      
+      {/* Floating orbs background */}
+      <div className="floating-orbs">
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={`hero-orb-${i}`}
+            className="floating-orb"
+            style={{
+              width: `${Math.random() * 8 + 6}px`,
+              height: `${Math.random() * 8 + 6}px`,
+              left: `${Math.random() * 100}%`,
+              background: i % 3 === 0 ? 'hsl(var(--neon-cyan))' : i % 3 === 1 ? 'hsl(var(--neon-purple))' : 'hsl(var(--neon-blue))',
+              animationDelay: `${Math.random() * 20}s`,
+              animationDuration: `${20 + Math.random() * 10}s`,
+            }}
+          />
+        ))}
+      </div>
       
       {/* Floating particles */}
       <div className="absolute inset-0">
@@ -27,13 +45,13 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         {/* Logo */}
         <div className="relative mb-8 inline-block">
-          <div className="absolute inset-0 bg-neon-cyan/20 rounded-full blur-2xl scale-150 animate-glow-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/25 via-neon-purple/15 to-neon-blue/25 rounded-full blur-3xl scale-150 animate-glow-pulse" />
           <img
             src={cryptoraLogo}
             alt="Cryptora Logo"
             className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 mx-auto drop-shadow-2xl"
             style={{
-              filter: 'drop-shadow(0 0 15px rgba(0, 255, 255, 0.4))',
+              filter: 'drop-shadow(0 0 25px rgba(0, 255, 255, 0.5)) drop-shadow(0 0 50px rgba(128, 0, 255, 0.3))',
             }}
           />
         </div>
