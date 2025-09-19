@@ -11,7 +11,7 @@ export default function TeamSection() {
       bgColor: 'bg-neon-cyan/10',
       borderColor: 'border-neon-cyan/30',
       gradient: 'from-neon-cyan/20 to-transparent',
-      description: 'Visionary leader and co-creator of Cryptora Discord bot',
+      description: 'leader and creator of Cryptora Discord bot',
       details: 'Project visionary, community leader, and strategic planning',
     },
     {
