@@ -15,7 +15,7 @@ export default function TeamSection() {
       details: 'Project visionary, community leader, and strategic planning',
     },
     {
-      name: 'Sandeep',
+      name: 'Sandeep op',
       role: 'Bot Developer',
       suffix: '(OP)',
       icon: Code2,
